@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reference</title>
+    <style>
+        P {
+            margin: 0px;
+        }
+
+        button {
+            display: flex;
+            color: white;
+            background-color: rgb(0, 0, 0, 0);
+            padding: 0px;
+            margin: 0px;
+            width: 50px;
+            height: 50px;
+            font-size: large;
+            transition: 0.5s;
+            align-items: center;
+            justify-content: center;
+            background: url(img/back.png) no-repeat;
+            background-size: 426px 50px;
+            border-right: 0px;
+            border-top: 0px;
+            border-bottom: 0px;
+        }
+
+        button:hover {
+            width: 150px;
+        }
+
+        button>span {
+            display: flex;
+            position: relative;
+            left: 25px;
+            color: white;
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+            height: 50px;
+            width: 0px;
+            opacity: 1;
+            align-items: center;
+            white-space: nowrap;
+            transition: all 0.5s;
+        }
+
+        button:hover>span {
+            width: 100px;
+        }
+
+        button:hover>span:active {
+            background-color: rgb(60, 60, 60, 0.4);
+            transition: 0s
+        }
+
+        p.md {
+            color: mediumblue;
+            text-decoration: underline;
+            text-decoration-color: mediumblue;
+            display: inline
+        }
+
+        @keyframes white {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes genshin {
+            0% {
+                opacity: 0;
+            }
+
+            87.5% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        img#white {
+            opacity: 0;
+            animation: white 7s forwards;
+        }
+
+        img#genshin {
+            opacity: 0;
+            animation: genshin 8s forwards;
+        }
+    </style>
+    <script>
+        function index() {
+            window.location.assign("./index.html");
+        }
+        function index1() {
+            window.location.assign("./gamehub.html");
+        }
+        function index2() {
+            window.location.assign("./tool.html");
+        }
+        function index3() {
+            window.location.assign("./document.html");
+        }
+        function index4() {
+            var userAgent = navigator.userAgent;
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+            var audio = document.createElement('embed');
+            audio.src = 'audio/genshin.mp3';
+            audio.width = 0;
+            audio.height = 0;
+            document.getElementById("body").appendChild(audio);
+            var white = document.createElement("img");
+            white.style.position = 'fixed';
+            white.style.display = 'block';
+            white.style.zIndex = 100;
+            white.src = "img/white.png"; if (isMobile && window.orientation == 0) {
+                white.width = window.screen.height;
+                white.height = window.screen.width;
+                white.style.top = (white.width - white.height) / 2 + 'px';
+                white.style.left = (white.height - white.width) / 2 + 'px';
+                white.style.transform = 'rotate(90deg)';
+            } else {
+                white.style.width = '100vw';
+                white.style.height = '100vh';
+                white.style.top = 0;
+                white.style.left = 0;
+            }
+            white.id = 'white';
+            document.getElementById("body").appendChild(white);
+            var genshin = document.createElement("img");
+            genshin.style.position = 'fixed';
+            genshin.style.display = 'block';
+            genshin.style.zIndex = 101;
+            genshin.src = "img/genshin.png";
+            if (isMobile && window.orientation == 0) {
+                genshin.width = window.screen.height;
+                genshin.height = window.screen.width;
+                genshin.style.top = (genshin.width - genshin.height) / 2 + 'px';
+                genshin.style.left = (genshin.height - genshin.width) / 2 + 'px';
+                genshin.style.transform = 'rotate(90deg)';
+            } else {
+                genshin.style.width = '100vw';
+                genshin.style.height = '100vh';
+                genshin.style.top = 0;
+                genshin.style.left = 0;
+            }
+            genshin.id = 'genshin'
+            document.getElementById("body").appendChild(genshin);
+            setTimeout(function () { removeall() }, 7000);
+        }
+        function removeall() {
+            while (document.getElementById('body').children.length > 3) {
+                document.getElementById('body').removeChild(document.getElementById('body').children[0]);
+            }
+        }
+    </script>
+</head>
+
+<body id="body" style="margin: 0px;">
+    <div
+        style="display: flex; flex-direction: row-reverse; height: 50px;background-color: #393d49;background: url(img/back1.png) no-repeat;background-size:100% 100px;">
+        <p onclick="index()"
+            style="cursor: pointer;margin: 5px;font-size: 30px;position: absolute;left: 0px; color: wheat">540</p>
+        <button style="z-index: 10;">1<span onclick="index1()">自制游戏</span></button>
+        <button style="z-index: 9;">2<span onclick="index2()">奇妙工具</span></button>
+        <button style="z-index: 8;">3<span onclick="index3()">文档</span></button>
+        <button style="z-index: 7;">4<span id="genshin" onclick="index4()">元气</span></button>
+    </div>
+    <script>document.getElementById('genshin').addEventListener('click', function () { document.documentElement.requestFullscreen() })</script>
+    <script>sk - cGzB0UqLQ3wiT4bw27C1T3BlbkFJtw3VrfVKYMQyQWoLvOvncd</script>
+
+    <p>很多东西你可能看不懂，但我只是纯粹把这里当记事本了(</p><br><br><br>
+    <p>同一角色只可上场一个。每个人物、地块可以在除了技能目标选择时之外的任何时间被选中，并查看属性、技能。但只有在自己回合内才可移动、使用技能。</p>
+    <p>生成模块(x,y)</p>
+    <p>选择模块(id)</p>
+    <p>受击模块(id,减少血量,减少最大血量,减少移动,减少最大移动,减少反应,伤害类型 物0真1,0索敌/1索地,来源目标,来源位置x,来源位置y,)</p>
+    <p>移动模块(id,方向01234无上右下左,格数,类型0主动1被动,来源目标,来源位置x,来源位置y)</p>
+    <p>被动移动时若方向为0，则自动判定为朝来源方向移动，格数大于0推，小于0拉。格数绝对值若大于1，则一格一格进行，也就是最多只能在九宫格内移动。推拉会先检测当前位置的相对方向的位置是否阻挡，然后预测最终位置，判断位置是否阻挡。若方向不为0，则视为传送，无论格数绝对值是否为1，都一次执行，并且只探测目标位置是否阻挡。
+    </p>
+    <p>全局技能模块：为了判定对方的行为并作出反应，任何行为（包括移动、技能、下一回合、受击）发出后都会遍历一次场上所有目标的全局技能模块，判断是否需要执行技能</p>
+    <p>已解决：位置判定、回合制、攻击范围、攻击范围显示、动画、技能数据、回合属性重置、选择器0、控制区0、传送、检测移动是否有地块、死亡特效、合并input</p>
+    <p>待解决：右侧血条、画图、全局技能、队伍、ai、批量制作、提示信息、操作员模式、移动动画、全局技能模块死后复制、特效独立,合并动画、眩晕人的人被眩晕 无法解除眩晕</p>
+    <p>需测试：治疗、传送、死后全局技能、治疗特效、锁定位置检测、检测曼哈顿距离</p>
+    <p>对象属性:id、fixedid、名称、最大生命、当前生命、移动、最大移动、反应、x、y、技能是否可用、可否移动、图片路劲、方向、是否阻挡、类型（0地块，1人物，2召唤物）、技能名称、技能图片路劲、技能冷却、技能类型（1主动0被动）、技能描述、图层(地块0，人物5)、移动模块、受击模块、攻击倍率（正整数）、攻击增加、受击倍率（正整数）、受击增加
+    </p>
+    <p>对象属性:id、fixedid(1~1000人物1001~2000召唤物2001~3000地块)、name、max_health、health、movement、reflect、x、y、skillable、movable、img、direction
+    </p>
+    <p>反应：反应越高，每回合行动越早。反应相同时，移动越高行动越早。移动也相同时，越早生成（出现在棋盘上）越早行动。此外，fixedid相同（多个相同人物）可同时移动。</p>
+    <p>state = 0;0正常选择,1等待输入对象,2等待输入坐标</p>
+    <p>contrl = 1;1生成人物2移动3技能</p>
+    <p>典型人物：锁（多）人物攻击、锁（多）地面攻击、传送、推拉、召唤、防御、方向阻挡、移动痕迹、反伤、移动攻击、回血、秒杀、闪避、概率、现实攻击、增益、敌人移动扣血、受击闪避、飞</p>
+    <p>血量：10~30，正常20</p>
+    <p>移动：1~20，正常5</p>
+    <p>反应：1~20，正常5。反应为0的物体可以行动。反应为-1的物体不可以行动。机械>反应见长人物>5>普通人</p>
+    <p>图层：地块0，人物5，动画粒子等20+</p>
+    <p>回合制：初始0回合，每回合开始，将所有移动、技能冷却初始化。然后寻找class不为0、fixedid不在acted_fixedid中且反应比last_reflect小的最大反应、移动、最小id，将act_find设置为1、记录此fixedid入acted_fixedid。若act_find==0,进入下一回合，重置数组,last_reflect=9999。
+    </p>
+    <p>active_fixedid：初始-1</p>
+    <p>active_reflect：初始0</p>
+    <p>active_movement：初始0</p>
+    <p>active_id：初始为id+1</p>
+    <p>acted_fixedid:数组</p>
+    <p>ai：先索敌，判断是否攻击，再根据敌人定位，再寻路移动，每移动都判断一次是否攻击。</p>
+    <p>索敌：就近：就近敌人。算计：计算寻路最优的敌人。斩首：血量最低的人物。</p>
+    <p class="md" onclick="alert('索敌模块：选择就近敌人')">就近
+    </p>
+    <p class="md" onclick="alert('索敌模块：计算选择寻路最优的敌人')">算计
+    </p>
+    <p class="md" onclick="alert('索敌模块：选择血量最低的人物（非召唤物）')">斩首
+    </p>
+    <p>定位：近战：超敌人靠近。远战：控制敌人在攻击边缘。场外：远离敌人</p>
+    <p class="md" onclick="alert('定位模块：超敌人靠近')">近战
+    </p>
+    <p class="md" onclick="alert('定位模块：让敌人处于自己攻击边缘')">远战</p>
+    <p class="md" onclick="alert('定位模块：远离敌人')">场外
+    </p>
+    <p>寻路：懦弱：能抵达总是绕路，避开陷阱。演算：计算走格数+移动*所需攻击次数最小值，避开陷阱。莽撞：摧毁路上一切可摧毁障碍，不避开陷阱。</p>
+    <p class="md" onclick="alert('寻路模块：能直接抵达时总是绕路，避开陷阱。不能直接抵达则寻找所需攻击最少的路劲')">懦弱
+    </p>
+    <p class="md" onclick="alert('寻路模块：计算需要走格数+移动*所需停下攻击次数 最小的路劲，避开陷阱')">演算
+    </p>
+    <p class="md" onclick="alert('寻路模块：摧毁路上一切可摧毁障碍，不会绕路，不避开陷阱')">莽撞
+    </p>
+    <p>性格：暴虐：可攻击队友。团结：不可攻击队友</p>
+    <p class="md" onclick="alert('性格模块：可攻击队友）')">暴虐
+    </p>
+    <p class="md" onclick="alert('性格模块：不可攻击队友')">团结
+    </p>
+    <p>随机：随性50%。失心20%。马虎10%。清醒5%。严明0%。</p>
+    <p class="md" onclick="alert('随机模块：在决定是否移动/移动方向/是否攻击时 有50%可能不按照计划行动')">随性
+    </p>
+    <p class="md" onclick="alert('随机模块：在决定是否移动/移动方向/是否攻击时 有20%可能不按照计划行动')">失心
+    </p>
+    <p class="md" onclick="alert('随机模块：在决定是否移动/移动方向/是否攻击时 有10%可能不按照计划行动')">马虎
+    </p>
+    <p class="md" onclick="alert('随机模块：在决定是否移动/移动方向/是否攻击时 有5%可能不按照计划行动')">清醒
+    </p>
+    <p class="md" onclick="alert('随机模块：在决定是否移动/移动方向/是否攻击时 有0%可能不按照计划行动')">严明
+    </p>
+    <p>全屏显示可能不全，但实际是全屏</p>
+    <p>地板不能有主动技能，因为地板没有行动回合。</p>
+    <p>需要有一个特殊状态数组，记录人物是否处于特殊状态。因为某些被动技能不应该在眩晕等状态停止，所以更改反应会出现诸多问题。</p>
+    <p>技能若是因为条件不符无法发动，则不刷新技能页面，也就是保留选择</p>
+    <p>初始特殊地形：祭坛：每三回合全屏一点伤害/每回合周围一点伤害。每两回合全屏拉三格。每回合推一格。多龙卷风拉+伤。占塔回血。占塔伤害。占塔小兵。地刺。</p>
+    <p>因为图层不能有小数负数，所以地块0~100,人物105,动画粒子等120+</p>
+    <p></p>
+    <p>人物设计：</p>
+    <p>累计伤害</p>
+    <p>累计治疗</p>
+    <p></p>
+    <p>史莱姆</p>
+    <p>无人机。召唤一个无人机，攻击1点，生命3，移动5，冷却2回合。无人机暴走，持续三回合（实际有效两回合）攻击加倍，移动+3，结束时无人机爆炸，对周围9格造成伤害，冷却6回合。召唤治疗无人机，每回合为所有无人机回复1点生命，冷却5回合。
+    </p>
+    <p>螃蟹</p>
+    <p>将军</p>
+    <p>跳棋</p>
+    <p>围棋</p>
+    <p>蝙蝠</p>
+    <p>水滴</p>
+    <p>拉，横扫</p>
+    <p>毒</p>
+    <p>火焰领主</p>
+    <p>同归于禁</p>
+    <p>盾：以自身为起点，攻击来源方向为终点的向量，在自身面朝方向的分向量大于0，则抵挡一点伤害</p>
+    <p>盾：以自身为起点，攻击来源方向为终点的向量，与自身面朝方向平行且同向，则抵挡一点伤害</p>
+    <p>放鬼的</p>
+    <p>机枪、大炮</p>
+    <p>鸟人</p>
+    <p>折回攻击</p>
+    <p>击退眩晕</p>
+    <p>领主</p>
+    <p>蝙蝠免伤</p>
+    <p>格斗家</p>
+    <p>拳击手</p>
+    <p>蔡徐坤</p>
+    <p>削弱</p>
+    <p>随即效果\秒杀</p>
+    <p>贪吃蛇</p>
+    <p>治疗</p>
+    <p>吸血</p>
+    <p>走路攻击</p>
+    <p>军队</p>
+    <p>小队</p>
+    <p>遁地无法选中</p>
+    <p>火搓球，五球自扣血</p>
+    <p>水地下水池塘湖泊负面效果</p>
+    <p>阵法</p>
+    <p>在敌人回合额外行动</p>
+    <p>冲刺至敌人，传送至敌人身后，冲刺同等距离。撞墙眩晕。</p>
+    <p>改别人移动</p>
+    <p>警戒模式反应+，移动-，攻击+</p>
+    <p>攻击敌人前，对目标敌人1点防御</p>
+    <p>攻击范围不断增大</p>
+    <p>行动完回到原地</p>
+    <p>治疗/攻击一点</p>
+    <p>目标下回合受攻击则加血</p>
+    <p>原地不动，小范围每回合+1，不能使用其他技能不能移动</p>
+    <p>下回合自身收到的攻击给其他友军恢复等量血量</p>
+    <p>目标受的伤转移给自身，同一回合收到三点伤害断开连接，自回</p>
+    <p>数回合无敌，无敌后扣很多血</p>
+    <p>把队友的血转移给队友</p>
+    <p>暴虐小怪：移动时前方有障碍物，消耗1点移动造成一点伤害</p>
+    <p>受击传送到目标身后</p>
+    <p>只能使用一次的传送</p>
+    <p>前方无敌，后方伤害加倍</p>
+    <p>打一下击退一格，用来破阵</p>
+    <p>近战溅射伤害</p>
+    <p>死亡后5回合内收到11次伤害才会死亡，否则复活。</p>
+    <p>史莱姆王：召唤。分裂出一个小史莱姆丢向远方</p>
+    <p>只能攻击对角线的真伤</p>
+    <p>玛恩纳，休息5回合，攻击4回合，3点伤害，休息防御1</p>
+    <p>每回合获得一个灵球，可以把灵球传递给范围内的队友，让队友攻击，集齐n个灵球还有特殊效果。比如消耗3灵球，3伤。5灵球防御+1。3灵球范围回血</p>
+    <p>几组不同风格的小怪，每10回合换一种怪。前10回合近战小怪，10~20+远程,20~30+破阵,30~40+治疗,40~50+刺客、机制怪。第10回合一组搭配的小怪，20回合开始，10回合一个boss。破阵可以是暴虐践踏破坏障碍物、溅射破坏障碍物、传送击退破阵
+    </p>
+</body>
+
+</html>
